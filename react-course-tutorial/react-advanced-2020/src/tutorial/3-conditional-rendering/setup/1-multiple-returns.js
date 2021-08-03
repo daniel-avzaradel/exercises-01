@@ -6,30 +6,39 @@ const MultipleReturns = () => {
   const [isError, setIsError] = useState(false);
   const [user, setUser] = useState(["default user"]);
 
-  const fetchData = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    setUser(data);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
-    fetchData();
+    fetch(url)
+      .then((res) => {
+        if (res.status >= 200 && res.status <= 299) {
+          return res.json();
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+          throw new Error(res.statusText);
+        }
+      })
+      .then((user) => {
+        const { login } = user;
+        setUser(login);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   if (isLoading) {
     return <h2>loading...</h2>;
   }
 
-  const { id, name, avatar_url, login, html_url } = user;
+  if (isError) {
+    return <h2>Error...</h2>;
+  }
 
   return (
     <ul>
       <div className="items">
-        <img src={avatar_url} alt={login} />
-        <h4>{name}</h4>
-        <a href={html_url}>Profile</a>
+        <h2>{user}</h2>
       </div>
     </ul>
   );
