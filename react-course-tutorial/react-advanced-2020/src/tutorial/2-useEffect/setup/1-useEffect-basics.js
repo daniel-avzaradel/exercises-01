@@ -6,8 +6,10 @@ const UseEffectBasics = () => {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
-    console.log("call useEffect");
-  });
+    if (value >= 1) {
+      document.title = `New value: ${value}`;
+    }
+  }, [value]);
   return (
     <>
       <h1>{value}</h1>
