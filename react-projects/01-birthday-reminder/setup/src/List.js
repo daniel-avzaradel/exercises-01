@@ -6,7 +6,7 @@ const List = ({ people }) => {
       <h2>list component</h2>
       <br />
 
-      {people.length === 0 ? <h3>no new birthdays</h3> : ""}
+      {people.length === 0 ? <h3>no new birthdaysgit </h3> : ""}
 
       {people.map((person) => {
         const { id, name, age, image } = person;
