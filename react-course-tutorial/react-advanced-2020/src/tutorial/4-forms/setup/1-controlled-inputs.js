@@ -10,32 +10,22 @@ const ControlledInputs = () => {
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
 
-  const Submit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hello world');
-  }
-
-  const handleChangeName = (e) => {
-    setFirstName(e.target.value)
-    console.log(e.target.value);
-  }
-
-  const handleChangeEmail = (e) => {
-    setEmail(e.target.value)
-    console.log(e.target.value);
+    console.log(firstName, email);
   }
 
   return (
     <>
     <article>
-      <form className='form' onSubmit={(e) => Submit(e)}>
+      <form className='form' onSubmit={(e) => handleSubmit(e)}>
         <div className="form-control">
           <label htmlFor="name">Name: </label>
-          <input type="text" id='firstName' name='firstName' value={firstName} onChange={(e) => handleChangeName(e)}/>
+          <input type="text" id='firstName' name='firstName' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
         </div>
         <div className="form-control">
           <label htmlFor="email">Email: </label>
-          <input type="text" id='email' name='email' value={email} onChange={(e) => handleChangeEmail(e)}/>
+          <input type="text" id='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
         </div>
         <button type='submit'>add person</button>
       </form>
