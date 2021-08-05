@@ -14,15 +14,15 @@ const Item = () => {
   const [size, setSize] = useState(window.innerWidth);
 
   const checkSize = () => {
-    setSize(window.innerWidthS)
+    setSize(window.innerWidth)
   }
 
   useEffect(() => {
     window.addEventListener('resize', checkSize)
-    return(() => {
+    return() => {
       window.removeEventListener('resize', checkSize)
-    })
-  }, [])
+    }
+  }, [size])
 
   return(
     <div style={{marginTop: '2rem'}}>
