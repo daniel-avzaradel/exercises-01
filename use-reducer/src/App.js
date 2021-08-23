@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Link } from "react-router-dom";
+import "./app.css";
 
 const Home = () => {
   return <h1>Home</h1>;
@@ -15,14 +15,41 @@ const MyProjects = () => {
 
 function App() {
   return (
-    <div>
-      <h1>APP</h1>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/myproject" component={MyProjects} />
-      </Switch>
-    </div>
+    <>
+      <div className="container">
+        <hr />
+        <div className="row">
+          <p>Cloud-hosted environment</p>
+          <p>Enjoy your IDE portable workspace</p>
+          <button>Cloud IDE</button>
+        </div>
+        <hr />
+
+        <div className="row">
+          <p>File Manager</p>
+          <p>
+            Navigate easily to different folders, upload or download
+            files/folders.
+          </p>
+          <button>File Expolorer</button>
+        </div>
+        <hr />
+
+        <div className="row">
+          <p>Cloud-hosted environment</p>
+          <p>Enjoy your IDE portable workspace</p>
+          <button>Cloud IDE</button>
+        </div>
+        <hr />
+
+        <div className="row">
+          <p>Cloud-hosted environment</p>
+          <p>Enjoy your IDE portable workspace</p>
+          <button>Cloud IDE</button>
+        </div>
+        <hr />
+      </div>
+    </>
   );
 }
 

@@ -1,0 +1,41 @@
+* {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+p {
+  text-align: left;
+  justify-content: flex-start;
+  display: flex;
+  margin: 20px 40px;
+}
+
+hr {
+  width: 100%;
+}
+
+button {
+  background-color: white;
+  border: 1px solid #d2d2d2;
+  border-radius: 4px;
+  padding: 8px 45px;
+  text-align: center;
+}
