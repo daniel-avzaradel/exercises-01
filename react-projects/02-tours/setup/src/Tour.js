@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
-const Tour = ({ tour }) => {
-  console.log("tour", tour);
+const Tour = ({ id, image, info, price, name }) => {
   return (
-    <>
-      <h2>{tour.name}</h2>
-      <p>{tour.info}</p>
-      <img src={tour.image} alt="" />
-    </>
+    <article className="single-tour">
+      <img src={image} alt={name} />
+      <footer>
+        <div className="tour-info">
+          <h4>{name}</h4>
+          <h4 className="tour-price">${price}</h4>
+        </div>
+      </footer>
+    </article>
   );
 };
 
