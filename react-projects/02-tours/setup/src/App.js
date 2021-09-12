@@ -43,13 +43,20 @@ function App() {
     );
   }
 
+  if (tours.length === 0) {
+    return (
+      <main>
+        <div className="title">
+          <h2>no tours left</h2>
+        </div>
+      </main>
+    );
+  }
   return (
     <main>
-      {tours.length > 0 ? (
+      <div className="title">
         <Tours tours={tours} removeTour={removeTour} />
-      ) : (
-        <h2>NO TOURS AVAIABLE</h2>
-      )}
+      </div>
     </main>
   );
 }
