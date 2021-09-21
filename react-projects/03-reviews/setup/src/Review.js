@@ -29,10 +29,12 @@ const Review = () => {
   };
 
   const randomPerson = () => {
-    setIndex(() => {
-      let random = Math.floor(Math.random() * 4);
-      return random;
-    });
+    let random = Math.floor(Math.random() * 4);
+    if (random === index) {
+      return randomPerson();
+    } else {
+      setIndex(random);
+    }
   };
 
   return (
