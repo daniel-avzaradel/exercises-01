@@ -1,11 +1,10 @@
 .header__page {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: auto;
   background-color: rgb(72, 90, 99);
-  padding: 1em;
   text-align: center;
+  padding: 1em;
 }
 
 .header__page h2 {

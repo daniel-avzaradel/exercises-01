@@ -1,10 +1,41 @@
 import React from "react";
+import FormRow from "./FormRow";
+
 import styles from "./Form.module.css";
 
 function Form() {
   return (
     <div className={styles.form__page}>
-      <div className={styles.form__container}>Form</div>
+      <div className={styles.form__container}>
+        <table>
+          <tr className={styles.form__tableHeader}>
+            <td>id</td>
+            <td>name</td>
+            <td>email</td>
+            <td>status</td>
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+          <FormRow
+            id="1"
+            name="daniel"
+            email="daniel@gmail.com"
+            status="active"
+          />
+          <FormRow
+            id="2"
+            name="david"
+            email="david@gmail.com"
+            status="active"
+          />
+          <FormRow
+            id="3"
+            name="aaban"
+            email="aaban@gmail.com"
+            status="active"
+          />
+        </table>
+      </div>
     </div>
   );
 }
