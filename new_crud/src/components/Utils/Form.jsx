@@ -2,11 +2,16 @@ import React from "react";
 import FormRow from "./FormRow";
 
 import styles from "./Form.module.css";
+import { FaUserPlus } from "react-icons/fa";
 
 function Form() {
   return (
     <div className={styles.form__page}>
       <div className={styles.form__container}>
+        <button className={styles.form__addUserBtn}>
+          <FaUserPlus size="20" color="cyan" />
+          Add User
+        </button>
         <table>
           <tr className={styles.form__tableHeader}>
             <td>id</td>
