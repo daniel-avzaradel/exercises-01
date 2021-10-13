@@ -1,0 +1,22 @@
+.header__page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: rgb(72, 90, 99);
+  padding: 1em;
+  text-align: center;
+}
+
+.header__page h2 {
+  color: white;
+  letter-spacing: 0.4rem;
+  margin: 10px auto;
+  padding: 0;
+  line-height: 1;
+}
+
+.header__page p {
+  margin: 0px auto;
+  color: #d2d2d2;
+}
