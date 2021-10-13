@@ -37,15 +37,16 @@
 }
 
 table {
-  border-radius: 4px;
   background-color: white;
   box-sizing: border-box;
   border-spacing: 0;
   padding: 0;
+  width: 50vw;
+  border-radius: 10px;
 }
 
 table tr td {
-  padding: 1em 2em;
+  padding: 1em;
   border-bottom: 1px solid #f2f6f6;
 }
 
@@ -59,5 +60,5 @@ table tr td svg {
 
 .form__tableHeader,
 .form__tableHeader:hover {
-  background-color: #e2e2e2;
+  font-weight: 600;
 }
