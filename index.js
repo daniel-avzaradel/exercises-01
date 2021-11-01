@@ -25,3 +25,56 @@ const person = {
 }
 
 console.log(person.fullName());
+
+
+const person1 = {
+    name: 'Daniel Avzaradel'
+}
+
+const animal1 = {
+    name: 'Dog'
+}
+
+function getName() {
+    console.log('name is: ', this.name); 
+}
+
+getName.call(person1)
+getName.call(animal1)
+
+
+// atividade 1 - JavaScript
+
+function avgGrade(students) {
+    let newStuds = students.filter(student => {
+        return student.grade >= 7 && student.firstName
+    })
+    for (let x in newStuds) {
+        console.log(newStuds[x].firstName, newStuds[x].grade.toFixed(1));
+    }
+}
+
+let studs = [
+    {
+        firstName: 'Daniel',
+        lastName: 'Avzaradel',
+        grade: 9.2
+    },
+    {
+        firstName: 'David',
+        lastName: 'Avzaradel',
+        grade: 8.6
+    },
+    {
+        firstName: 'Aaban',
+        lastName: 'Vasconcelos',
+        grade: 10
+    },
+    {
+        firstName: 'Gabriel',
+        lastName: 'Bemerguy',
+        grade: 4.6
+    }
+]
+
+avgGrade(studs)
