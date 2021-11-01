@@ -45,13 +45,18 @@ getName.call(animal1)
 
 // atividade 1 - JavaScript
 
-function avgGrade(students) {
-    let newStuds = students.filter(student => {
-        return student.grade >= 7 && student.firstName
-    })
-    for (let x in newStuds) {
-        console.log(newStuds[x].firstName, newStuds[x].grade.toFixed(1));
+function avgGrade(students, avg) {
+    let approved = []
+    
+    for(let i=0; i < students.length; i++) {
+        const {firstName, lastName, grade} = students[i];
+
+        if(grade >= avg) {
+            approved.push(firstName + ' ' + grade.toFixed(1))
+        }
     }
+    console.log(approved);
+    return approved
 }
 
 let studs = [
@@ -77,4 +82,4 @@ let studs = [
     }
 ]
 
-avgGrade(studs)
+avgGrade(studs, 7)
