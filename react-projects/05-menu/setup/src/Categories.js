@@ -1,7 +1,21 @@
-import React from 'react';
+import React from "react";
 
-const Categories = () => {
-  return <h2>categories component</h2>;
+const Categories = ({ filterItems, allCategories }) => {
+  return (
+    <div className="btn-container">
+      {allCategories.map((item, id) => {
+        return (
+          <button
+            className="filter-btn"
+            onClick={() => filterItems(item)}
+            key={id}
+          >
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Categories;
