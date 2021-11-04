@@ -6,7 +6,7 @@ function validArray(arr, num) {
       throw new TypeError("Submit an array with a object type");
 
     if (typeof num !== "number")
-      throw new TypeError("Array needs to be a number");
+      throw new TypeError("Num needs to be a number");
 
     if (arr.length !== num) throw new RangeError("Invalid size");
 
