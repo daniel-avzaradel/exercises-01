@@ -56,6 +56,11 @@ const BarChart = () => {
                   size: 40,
                 },
               },
+              legend: {
+                font: {
+                  size: 25,
+                },
+              },
             },
           }}
         />
