@@ -7,3 +7,13 @@ const soma = (arr) => {
 };
 
 console.log(soma(arr));
+
+function reduceFromBalance(arr, balance) {
+  let finalPrice = arr.reduce((prev, next) => {
+    return prev + next;
+  });
+
+  return balance - finalPrice;
+}
+
+console.log(reduceFromBalance([23, 45, 19, 9, 12], 250));
