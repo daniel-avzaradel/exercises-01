@@ -18,3 +18,26 @@ code {
   align-items: center;
   justify-content: center;
 }
+
+.landing_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8em 2.4em;
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.14s ease;
+  margin: auto;
+}
+
+.btn:hover {
+  background-color: rgb(107, 137, 226);
+}
