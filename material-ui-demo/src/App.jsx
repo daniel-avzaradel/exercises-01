@@ -71,6 +71,14 @@ function App() {
                 </Grid>
                 </Container>
             </main>
+            <footer className={classes.footer}>
+                <Typography align='center' variant='h6' gutterBottom>
+                    Footer
+                </Typography>
+                <Typography variant='subtitle1' align='center' color='textSecondary'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iusto quos rem consequuntur harum.
+                </Typography>
+            </footer>
         </>
     )
 }

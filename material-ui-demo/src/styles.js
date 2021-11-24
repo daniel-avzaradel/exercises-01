@@ -2,7 +2,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#f9f9f9',
         padding: '20px'
     },
     icon: {
@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
     },
     cardContent: {
         flexGrow: 1
+    },
+    footer: {
+        backgroundColor: '#f9f9f9',
+        padding: '50px 0'
     }
 }))
 
