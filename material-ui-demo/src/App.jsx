@@ -1,5 +1,7 @@
 import React from 'react';
-import { Typography, AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@mui/material';
+import { Typography, AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, Switch } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 import useStyles from './styles'
 
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
@@ -8,8 +10,16 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function App() {
     const classes = useStyles()
+    const [darkMode, setDarkMode] = React.useState(false)
+    const darkTheme = createTheme({
+  palette: {
+    mode: darkMode ? 'dark' : 'light',
+  },
+});
+
     return (
         <>
+        <ThemeProvider theme={darkTheme}>
             <CssBaseline />
             <AppBar position='relative'>
                 <Toolbar>
@@ -17,6 +27,9 @@ function App() {
                     <Typography variant='h6'>
                         Photo Album
                     </Typography>
+
+                <Switch color={darkMode ? 'secondary' : 'primary'} onChange={() => setDarkMode(!darkMode)}/>
+
                 </Toolbar>
             </AppBar>
             <main>
@@ -79,6 +92,7 @@ function App() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iusto quos rem consequuntur harum.
                 </Typography>
             </footer>
+        </ThemeProvider>
         </>
     )
 }
