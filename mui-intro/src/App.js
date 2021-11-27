@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./styles.css";
+import { Box, Button } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box justifyContent="center">
+        <h1>Material UI</h1>
+        <Button variant="outlined" color="primary">
+          Click me
+        </Button>
+      </Box>
     </div>
   );
 }
